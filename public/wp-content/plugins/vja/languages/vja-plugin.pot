@@ -1,0 +1,88 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: vja-plugin\n"
+"POT-Creation-Date: 2016-01-02 18:16+0100\n"
+"PO-Revision-Date: 2016-01-02 14:17+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _e;__;_n:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: vja.php:27
+msgid "The default modified meta widget"
+msgstr ""
+
+#: vja.php:37 vja.php:155 vja.php:156 vja.php:261 vja.php:262
+msgid "New title"
+msgstr ""
+
+#: vja.php:41
+msgid "Title:"
+msgstr ""
+
+#: vja.php:63
+msgid "Syndicate this site using RSS 2.0"
+msgstr ""
+
+#: vja.php:63
+msgid "Entries <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+msgstr ""
+
+#: vja.php:64
+msgid "The latest comments to all posts in RSS"
+msgstr ""
+
+#: vja.php:64
+msgid "Comments <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+msgstr ""
+
+#: vja.php:114
+msgid "the run"
+msgstr ""
+
+#: vja.php:121
+#, php-format
+msgid "<strong>Nobody registered</strong> for %1s (updated on: %2s)"
+msgstr ""
+
+#: vja.php:123
+#, php-format
+msgid "<strong>1 runner registered</strong> for %1s (updated on: %2s)"
+msgstr ""
+
+#: vja.php:125
+#, php-format
+msgid "<strong>%1s runners registered</strong> for %2s (updated on: %2s)"
+msgstr ""
+
+#: vja.php:144
+msgid "display the title and links to the \"Run of the month\""
+msgstr ""
+
+#: vja.php:160 vja.php:266
+msgid "Title (singular):"
+msgstr ""
+
+#: vja.php:164 vja.php:270
+msgid "Title (plural):"
+msgstr ""
+
+#: vja.php:203
+msgid "No run scheduled"
+msgstr ""
+
+#: vja.php:250
+msgid "display the title and links to the results of club's runs"
+msgstr ""
+
+#: vja.php:326
+msgid "No result yet"
+msgstr ""

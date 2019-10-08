@@ -1,0 +1,90 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VJA\n"
+"POT-Creation-Date: 2016-01-02 18:16+0100\n"
+"PO-Revision-Date: 2016-01-02 19:50+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: vja.php:27
+msgid "The default modified meta widget"
+msgstr "Le meta-widget par défaut - modifié"
+
+#: vja.php:37 vja.php:155 vja.php:156 vja.php:261 vja.php:262
+msgid "New title"
+msgstr "Nouveau titre"
+
+#: vja.php:41
+msgid "Title:"
+msgstr "Titre:"
+
+#: vja.php:63
+msgid "Syndicate this site using RSS 2.0"
+msgstr "Aggréger ce site avec RSS 2.0"
+
+#: vja.php:63
+msgid "Entries <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+msgstr "Entrées <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+
+#: vja.php:64
+msgid "The latest comments to all posts in RSS"
+msgstr "Les derniers comments de tous les articles en RSS"
+
+#: vja.php:64
+msgid "Comments <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+msgstr "Commentaires <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+
+#: vja.php:114
+msgid "the run"
+msgstr "la course"
+
+#: vja.php:121
+#, php-format
+msgid "<strong>Nobody registered</strong> for %1s (updated on: %2s)"
+msgstr "<strong>Pas d'inscrit</strong> pour %1s (mis à jour le: %2s)"
+
+#: vja.php:123
+#, php-format
+msgid "<strong>1 runner registered</strong> for %1s (updated on: %2s)"
+msgstr "<strong>1 inscrit</strong> pour %1s (mis a jour le: %2s)"
+
+#: vja.php:125
+#, php-format
+msgid "<strong>%1s runners registered</strong> for %2s (updated on: %2s)"
+msgstr "<strong>%1s inscrits</strong> pour %2s (mis à jour le: %2s)"
+
+#: vja.php:144
+msgid "display the title and links to the \"Run of the month\""
+msgstr "Affiche le titre et les liens de \"la course du mois\""
+
+#: vja.php:160 vja.php:266
+msgid "Title (singular):"
+msgstr "Titre (singulier):"
+
+#: vja.php:164 vja.php:270
+msgid "Title (plural):"
+msgstr "Titre (pluriel):"
+
+#: vja.php:203
+msgid "No run scheduled"
+msgstr "Pas de course programmée"
+
+#: vja.php:250
+msgid "display the title and links to the results of club's runs"
+msgstr "affiche un titre et les liens vers les résultats des courses club"
+
+#: vja.php:326
+msgid "No result yet"
+msgstr "Pas encore de résultat"
+
+#~ msgid "<strong>1 runner</strong> for %1s (updated on: %2s)"
+#~ msgstr "<strong>1 runner</strong> for %1s (updated on: %2s)"

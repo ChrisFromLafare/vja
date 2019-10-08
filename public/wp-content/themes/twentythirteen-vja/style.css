@@ -1,0 +1,87 @@
+/*
+Theme Name: Twenty Thirteen VJA
+Description: Thème enfant pour Twenty Thirteen spécifique VJA
+Author: Christian ARNAUD
+Template: twentythirteen
+*/
+
+@import url("../twentythirteen/style.css");
+
+.site-header {
+	background-color: #e9e7da !important;
+	background-position-x:0% !important;
+}
+
+.site-header .site-title:hover {
+	text-decoration: none;
+}
+
+.site-title {
+	margin-left: 0px;
+	font-size: 48px;
+}
+
+.site-title, .site-description {
+	padding-left:270px;
+}
+
+.webmaster {
+	float: right;
+}
+
+.proprio {
+	float: left;
+}
+
+.mentions-legales {
+	text-align: center;
+}
+
+/* Classes utilisées par le shortcode VMA_TABLE */
+.vmatablecaption {
+	text-align: center;
+}
+
+.vmatableheadcol {
+	text-align: center;
+	background-color: #B52B27;
+	color:white;
+}
+
+.vmatablebodycol {
+	text-align: center;
+}
+
+.vmatabletable col:nth-child(1), .vmatabletable col:nth-child(4) {
+	border-right: 1px solid #ededed;
+}
+
+.vmatablebody tr:nth-child(even){
+	background-color: #f7f5e7;
+}
+
+.vmatablebody tr:hover {
+	background-color: #70c24a
+}
+
+/* Gestion des tailles de media */
+@media (max-width: 643px) {
+	.site-title {
+		font-size: 30px;
+	}
+
+ .site-title, .site-description {
+	  padding-left:120px;
+}
+
+}
+
+@media (max-width: 359px) {
+	.site-title {
+		display:none;
+	}
+	.site-description {
+		display:none;
+	}
+}
+

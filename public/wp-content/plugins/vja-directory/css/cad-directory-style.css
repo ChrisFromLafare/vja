@@ -1,0 +1,208 @@
+.Cad-contact-info {
+    display: inline-block;
+    border-style: solid;
+    border-width: 0 0 0 5px;
+    border-radius: 10px 0;
+    vertical-align: top;
+    margin-bottom: 1em;
+}
+
+.Cad-contact-info p {
+    margin: 0 0 0 1em;
+}
+
+.Cad-contact-sport- {
+    border-left-color: grey;
+}
+
+.Cad-contact-sport-Marche {
+    border-left-color: red;
+}
+
+.Cad-contact-sport-Course {
+    border-left-color: blue;
+}
+
+.Cad-contact-idPhoto {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 2em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    height: 150px;
+    width: 150px;
+}
+
+.Cad-contact-idPhoto img {
+    max-height: 150px;
+    max-width: 150px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%
+}
+
+.Cad-contact-firstname, .Cad-contact-lastname {
+    font-weight: bold;
+}
+
+#vja_profile fieldset {
+    border: none;
+}
+
+#vja_profile label.text, #vja_profile label.select {
+    padding: 15px 0 5px 0;
+    height: 40px;
+    width: 90%;
+    font-weight: bold;
+    display:block;
+}
+
+#vja_profile .div_text, #vja_profile .div_select, #vja_profile .div_button  {
+//    height: 40px;
+    width: 90%;
+}
+#vja_profile .textbox, #vja_profile .dropdown {
+    height: 40px;
+    width: 900%;
+    margin: 2px;
+    padding: 5px;
+    border: 2px solid #d4d0ba;
+}
+
+#vja_profile1 .req-text {
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#vja_profile .req, #vja_profile .req-text {
+    color: #b94119;
+}
+
+#vja_profile .req-text {
+    margin-top: 15px;
+}
+#vja_profile .error {
+    color: #e30000 ;
+}
+
+#vja_profile p.error {
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+#vja_profile .buttons {
+    float: right;
+    margin: 15px 20px 5px;
+}
+
+#vja_profile .vjaDir-return {
+    margin-top: 15px;
+}
+
+#vja_profile .vjaDir-family-member li {
+    margin-bottom: 15px;
+    list-style: none;
+}
+
+#vja_profile .vjadir-section2 {
+    clear: left;
+}
+
+#vja_profile .div_checkbox input[type="checkbox"]{
+    margin-right: 0.8em;
+}
+
+#vja_profile legend {
+    font-family: Bitter, Georgia, serif;
+    line-height: 1.3;
+    font-size: 24px;
+}
+
+#vja-directory-main h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 20px
+}
+
+.Cad-directory-header {
+    padding: 7px 20px 15px;
+}
+
+.Cad-directory-footer {
+    padding: 5px 0;
+    margin-left: 20px;
+}
+
+.Cad-directory-footer span {
+    border: 1px solid #bc360a;
+    padding: 1px 5px;
+    margin: 5px;
+    color: #fff;
+    background-color: #bc360a;
+}
+
+.Cad-directory-footer span.nav-ext {
+    border-style: none;
+    color: #bc360a;
+    background-color: #ffffff;
+}
+
+.Cad-directory-footer a {
+    border: 1px solid #e8e4ce;
+    padding: 1px 5px;
+    margin: 2px;
+    color: #bc360a;
+}
+
+.Cad-directory-footer a:hover {
+    border: 1px solid #bc360a;
+    color: #ffffff;
+    background-color: #bc360a;
+    text-decoration: none;
+}
+
+#vja-directory-login-error {
+    margin: 100px 50px;
+    font-size: 2em;
+    color: #bc360a;
+}
+
+/* Style du div englobant le modal et le contenu */
+#vja-directory-content {
+    position: relative;
+    min-height: 300px;
+}
+
+/* boite modale semi transparente au dessus du contenu */
+#vja-directory-modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0b0b0b40;
+    z-index: 1000;
+/*    visibility: hidden; */
+}
+
+/* dans le modal, conteneur à texte */
+#vja-directory-modal-frame {
+    margin: 50px;
+    padding: 0px 10px;
+    background-color: #fffffff0;
+    border: #bc360a solid 1px;
+    border-radius: 1em;
+    font-size: 1.2em;
+    width: 70%;
+}
+
+.Cad-error {
+    margin: 50px;
+    padding: 10px 10px;
+    background-color: #fffffff0;
+    border: #bc360a solid 1px;
+    border-radius: 1em;
+    font-size: 1.2em;
+    width: 70%;
+    text-align: center;
+}
