@@ -15,6 +15,7 @@ Text Domain: vja-plugin
 /* Changelog
 Version 1.0: initial version
 Version 2.0: Run of the month widget added
+Version 2.1: deprecated constructors modified
 
 /* =========================================================
 Replicate the default meta widget and remove useless links
@@ -25,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class CAD_meta_widget extends WP_Widget {
  
-	function CAD_meta_widget() {
+	function __construct() {
 	// (constructor) Instantiate the parent object
 		parent::__construct( /* Base ID */'CAD_meta_widget', /* Name */'CAD_meta_widget', array( 'description' => __('The default modified meta widget','vja-plugin')));
 	}
@@ -53,13 +54,18 @@ class CAD_meta_widget extends WP_Widget {
 		$instance['title'] = strip_tags($new_instance['title']);
 		return $instance;
 	}
- 
-	function widget( $args, $instance ) {
+
+    function widget( $args, $instance ) {
 		// output the content of the widget
 		extract( $args );
-		$title = apply_filters( 'widget_title', $instance['title'] );
+        /** @var string $before_title */
+        /** @var string $after_title */
+        /** @var string $before_widget */
+        /** @var string $after_widget */
+        $title = apply_filters( 'widget_title', $instance['title'] );
 		echo $before_widget;
-		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; } ?>
+		if ( !empty( $title ) ) {
+            echo $before_title . $title . $after_title; } ?>
 		<ul>
 			<?php wp_register(); ?>
 			<li><?php wp_loginout(); ?></li>
@@ -121,7 +127,9 @@ function CAD_table_registered_shortcode($atts) {
 		'id' => '',
 		'text' => __('the run','vja-plugin'),
 	), $atts, 'registered'));
-	if ('' == $id) return "";
+    /** @var int $id */
+    /** @var string $text */
+    if ('' == $id) return "";
 	$n = do_shortcode("[table-info id=$id field=\"number_rows\"]");
 	$date = do_shortcode("[table-info id=$id field=\"last_modified\"]");
 	switch ($n) {
@@ -145,7 +153,7 @@ add_shortcode("CAD_registered", "CAD_table_registered_shortcode");
 
 class CAD_runofthemonth_widget extends WP_Widget {
  
-	function CAD_runofthemonth_widget() {
+	function __construct() {
 	// (constructor) Instantiate the parent object
 		parent::__construct( /* Base ID */'CAD_runofthemonth_widget', /* Name */'Run of the month', 
 			 array( 'description' => 
@@ -212,6 +220,10 @@ class CAD_runofthemonth_widget extends WP_Widget {
 		endif;
 		// output the content of the widget
 		extract( $args );
+        /** @var string $before_widget */
+        /** @var string $after_widget */
+        /** @var string $before_title */
+        /** @var string $after_title */
 		if (count($run_list) <= 1):
 			$title = apply_filters( 'widget_title', $instance['title_1'] );
 		else:
@@ -251,7 +263,7 @@ add_action( 'widgets_init', 'CAD_register_rotm_widget' );
 
 class CAD_clubrunresult_widget extends WP_Widget {
  
-	function CAD_clubrunresult_widget() {
+	function __construct() {
 	// (constructor) Instantiate the parent object
 		parent::__construct( /* Base ID */'CAD_clubrunresult_widget', /* Name */'Club\'s run results', 
 			 array( 'description' => 
@@ -335,6 +347,10 @@ class CAD_clubrunresult_widget extends WP_Widget {
 		endif;
 		// output the content of the widget
 		extract( $args );
+        /** @var string $before_widget */
+        /** @var string $after_widget */
+        /** @var string $before_title */
+        /** @var string $after_title */
 		if (count($run_list) <= 1):
 			$title = apply_filters( 'widget_title', $instance['title_1'] );
 		else:
