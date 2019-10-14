@@ -7,7 +7,7 @@ Author: Christian ARNAUD
 Text Domain: vja-plugin
 */
 
-/* Modify defaut meta widget */
+/* Modify default meta widget */
 /* Create specific RSS feeds getting the posts and the comments published during the last day */
 /* Create a shortcode for Tablepress, allowing to properly output the number of items contained in the table */
 /* Create a Widget displaying the "run of the month" based the articles in the "inscription" category */
@@ -383,6 +383,23 @@ function vja_plugin_load_textdomain() {
 	load_plugin_textdomain( 'vja-plugin', false, dirname( plugin_basename(__FILE__) ) . '/languages' );
 }
 
+/**
+Round distance to 1, 5, or 10m, depending of the distance
+ * @param $speed : speed in km/h
+ * @param $time : time in seconds
+ * @return rounded distance
+ */
+function CAD_vma_calc_distance($speed, $time) {
+    $d = $speed * $time / 3.6;
+    if (400 > $d)
+        $e = sprintf("%d", round($d, 0));
+    elseif (1000 > $d)
+        $e = sprintf("%d", round($d / 5, 0) * 5);
+    else
+        $e = sprintf("%d", round($d / 10, 0) * 10);
+    return $e;
+}
+
 function CAD_vma_table($atts, $content = null, $tag = '') {
 	$atts = array_change_key_case((array)$atts,CASE_LOWER);
 	// Priorité au temps pour l'affichage du tableau'
@@ -479,14 +496,14 @@ function CAD_vma_table($atts, $content = null, $tag = '') {
 			/* Calculer le temps */
 			$e = date('H:i:s', $atts['distance_effort']*3.6/$ve);
 		else
-			/* Calculer la distance arrondies à 10 metres */
-			$e = sprintf("%d", round($ve * $temps_effort/36.0, 0) * 10);
+			/* Calculer la distance arrondies à 1,5, ou 10 metres en fct de la distance*/
+            $e = CAD_vma_calc_distance($ve, $temps_effort);
 		if ($recupdistance)
 			/* Calculer le temps */
 			$r = date('H:i:s', $atts['distance_recup']*3.6/$vr);
 		else
-			/* Calculer la distance arrondies à 10 metres */
-			$r = sprintf('%d', round($vr * $temps_recup/36.0, 0) * 10);
+			/* Calculer la distance arrondies à 1, 5, 10 metres */
+			$r = CAD_vma_calc_distance($vr, $temps_recup);
 		$out .= '  <tr class="vmatablebodyrow">';
 		$out .= sprintf('   <td class="vmatablebodycol">%.1f</td>',$v);
 		$out .= sprintf('   <td class="vmatablebodycol">%.1f</td>',$ve);
@@ -511,7 +528,7 @@ add_shortcode('CAD_VMA', 'CAD_vma_table');
 function CAD_exclude_tags($the_tags) {
 	$new_tags = [];
 	foreach ($the_tags as $tag) {
-		if ('post_tag'===$tag->taxonomy &&'_' === substr($tag->name,0,1)) continue;
+		if ('post_tag'===$tag->taxonomy && '_' === substr($tag->name,0,1)) continue;
 		$new_tags[] = $tag;
 	}
 	return $new_tags;
