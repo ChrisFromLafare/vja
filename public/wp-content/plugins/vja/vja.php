@@ -16,6 +16,7 @@ Text Domain: vja-plugin
 Version 1.0: initial version
 Version 2.0: Run of the month widget added
 Version 2.1: deprecated constructors modified
+Version 2.2: Modif calcul de la distance dans VMA_Table
 
 /* =========================================================
 Replicate the default meta widget and remove useless links
